@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" rel="stylesheet">
 </head>
 <body>
     <h1>Bussi/juna/yms reitti kartalle</h1>
     
     <form action="/coordinates" method="post">
-        <input type="text" name="location" placeholder="Enter a location">
-        <button type="submit" onclick="(e) => { e.preventDefault();}">Get Coordinates</button>
+        <input type="text" name="location" placeholder="Enter a location/address">
+        <button type="submit" onclick="(e) => { e.preventDefault();}">Get route to school</button>
     </form>
     
 </body>

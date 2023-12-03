@@ -11,8 +11,47 @@
     <h2>Route to school</h2>
     
     <div id="map" style="width: 100%; height: 400px;"></div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
     <script src="/Polyline.encoded.js" type="text/javascript"></script>
     <script src="/app.js" type="text/javascript" defer></script>
+    
+    <div class="time-wrapper" style="background-color: lightblue;">
+        <h3 style="padding: 0; margin: 0;">Route info: </h3>
+        <div class="start"></div>
+        <div class="end"></div>
+    </div>
+
+    <div class="distance-wrapper" style="background-color: lightblue; border-bottom: 1px solid black;">
+        
+        <div class="walked"></div>
+        <div class="bus"></div>
+        <div class="train"></div>
+        <div class="tram"></div>
+        <div class="other"></div>
+    </div>
+
+    <div class="colors" style="background-color: lightblue; border-bottom: 1px solid black;">
+        <h3 style="padding: 0; margin: 0;">Route colors: </h3>
+        <span style="background-color: red";>USING BUS</span>
+        <br><span style="background-color: black; color: white;";>WALKING</span>
+        <br><span style="background-color: yellow";>USING TRAIN</span>
+        <br><span style="background-color: magenta";>USING TRAM</span>
+        <br><span style="background-color: blue; color: white;";>OTHER (METRO)</span>
+        <br><span> Im using different colors compared to the example due to my color blindness.</span>
+    </div>
+    <div class="stops-wrapper" style="background-color: lightblue; border-bottom: 1px solid black;">
+        <span style="color: black;";><span style="background-color: yellow; color: black;"> YELLOW DOT </span> = SCHOOL LOCATION</span>
+        <br><span style="color: black;";><span style="background-color: WHITE; color: black;"> WHITE DOT </span> = STOPS ALONG ROUTE</span>
+        <br><span style=" color: black;";> <span style="background-color: black; color: white;"> BLACK DOT </span> = STARTING POINT ALONG ROUTE</span>
+    </div>
+        
+
+    
+
+    <form action="/coordinates" method="post">
+        <input type="text" name="location" placeholder="Enter another location/address">
+        <button type="submit" onclick="(e) => { e.preventDefault();}">Get route to school</button>
+    </form>
 </body>
 </html>
